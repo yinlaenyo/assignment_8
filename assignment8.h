@@ -75,7 +75,7 @@ void myStrongPassword(char pass[50]);
 void phone_validation(unsigned long long int phone);
 void phone_format_checking(unsigned long long int phone_toCheck);
 void copy_two_char_array(char receiver[200] ,char transmitter[200] );
-void finding_phone_number(unsigned int tofind);
+void finding_phone_number(unsigned long long int tofind);
 void transfer_money(int transfer , int receiver , unsigned int amount);
 void recording_alldata_toFile();
 void integer_to_char(unsigned long long int value);
@@ -605,13 +605,13 @@ void phone_format_checking(unsigned long long int phone_toCheck){
     if(phone_toCheck_array[0]=='9' && phone_toCheck_array[1]=='5' && phone_toCheck_array[2]=='9'){
         char prefix =phone_toCheck_array[3];
 
-         if (prefix == '2' || prefix== '5'){
+        if (prefix == '2' || prefix== '5'){
             if(phone_counter>=10 && phone_counter<= 12){
                 phone_format_valid=1;
             }
-         }else if(phone_counter == 12){
-             phone_format_valid=1;
-         }
+        }else if(phone_counter == 12){
+            phone_format_valid=1;
+        }
     }
 }
 
@@ -660,7 +660,7 @@ void copy_two_char_array(char receiver[200] ,char transmitter[200] ){
     }
 }
 
-void finding_phone_number(unsigned int tofind){
+void finding_phone_number(unsigned long long int tofind){
 
     for(int i=0; i<users ; i++){
 
